@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import "./food.css"
+import "./news.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 
-export const Food = () => {
+export const News = () => {
   const [data, setData] = useState([])
   const getAllData = async () => {
       const res = await axios("http://localhost:3000/products");
@@ -21,7 +21,7 @@ export const Food = () => {
         <div className="container">
             <div className="foodSection">
                 <div className="foodText">
-                    <h6>OUR OFFERS</h6>
+                    <h6>NEWS</h6>
                     <h1>Our Offer This Summer</h1>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
@@ -33,7 +33,7 @@ export const Food = () => {
                         <p>{elem.price}</p>
                     <h3>{elem.title}</h3>
                     <p>{elem.description}</p>
-                    <Button className='buton' variant="warning">Read More</Button>{' '}
+                    <Button className='buton' variant="danger">Delete</Button>{' '}
 
                       </div>
                     })

@@ -34,8 +34,16 @@ const productSchema = new Schema({
     require: true,
   },
 });
+const productGallery = new Schema({
+  imgSrc: {
+    type: String,
+    require: true,
+  },
+});
 
 const Product = mongoose.model("Product", productSchema);
+const Gallery = mongoose.model("Gallery", productGallery);
+
 
 app.post("/products", async (req, res) => {
   try {
@@ -56,7 +64,33 @@ app.post("/products", async (req, res) => {
   }
 });
 
+app.post("/gallery", async (req, res) => {
+  try {
+    const { imgSrc } = req.body;
+    const product = new Gallery({
+      imgSrc
+    });
+    await  product.save();
 
+    res.status(201).send(product);
+  } catch (err) {
+    res.status(500).json({
+      message: err,
+    });
+  }
+});
+app.get("/gallery", async (req, res)=> {
+  try {
+     const products= await Gallery.find({})
+  
+      res.status(200).send(products);
+    } catch (err) {
+      res.status(500).json({
+        message: err,
+      });
+    }
+
+});
 app.get("/products", async (req, res)=> {
     try {
        const products= await Product.find({})

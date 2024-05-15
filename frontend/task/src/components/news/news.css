@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.food {
+    background-color: #f8f9fa !important;
+    margin-top: 200px;
+}
+
+
+.foods{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.card{
+    border: 1px solid black;
+    border: none;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    img{
+        width: 200px;
+    }
+    p{
+        width: 200px;
+    }
+    .buton{
+        width: 200px;
+    }
+}

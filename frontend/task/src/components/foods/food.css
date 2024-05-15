@@ -6,7 +6,6 @@
 
 .food {
     background-color: #f8f9fa !important;
-    height: 100vh;
 }
 
 .foodText {
@@ -14,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 50px;
     h6 {
         font-size: 16px;
         text-transform: uppercase;
@@ -43,30 +42,32 @@
         text-align: center;
         color: #b8b8b8;
         display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        unicode-bidi: isolate;
-        margin: 0px 0px 16px;
     }
 }
 .foods{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
     width: 100%;
+    gap: 20px;
 }
 .card{
     border: 1px solid black;
     border: none;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     img{
         width: 200px;
     }
     p{
         width: 200px;
     }
-    
+    .buton{
+        width: 200px;
+    }
 }
